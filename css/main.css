@@ -1,0 +1,141 @@
+html {
+    font-family: "Calibri", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+body {
+    background-color: #324045;
+    color: #e5e0ce;
+}
+
+#canvas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding:  0 10px;
+    border-left: 1px solid #748186;
+    border-bottom: 1px solid #748186;
+}
+
+#y_axis {
+    width: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.y_axis-tick {
+    /* border-top: 1px solid #1e1e1e54; */
+    font-size: 11px;
+    position: relative;
+}
+
+.y_axis-tick span {
+    position: absolute;
+    top: -8px;
+}
+
+.y_axis-tick::after {
+    background-color: #646464;
+    display: inline-block;
+    height: 1px;
+    width: 4px;
+    position: relative;
+    left: 20px;
+    top: 0px;
+    content: "";
+}
+
+.bar {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.bar_sub {
+    border-bottom: 1px solid #ffffff33;
+    color: #ffffff33;
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar_sub span:first-child {
+    padding-left: 5px;
+}
+
+.bar_sub span.bar_sub--value {
+    padding-right: 5px;
+}
+
+.bar_sub--value {
+    color: transparent;
+    font-size: 13px;
+    transition: 0.5s;
+}
+
+#legend {
+    align-self: flex-start;
+    margin-left: -60px;
+}
+
+.legend_entry {
+    display: flex;
+    height: 20px;
+    margin-bottom: 2px;
+    padding: 0 10px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    background-color: #43565b;
+}
+
+.legend_entry--text {
+    padding-left: 5px;
+}
+
+.legend_entry--bubbles {
+    padding-right: 9px;
+    color: #ffffff52;
+    border-right: 4px solid #324045;
+}
+
+.legend_entry--bubble {
+    min-width: 40px;
+}
+
+.legend_entry--bubble-before {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    content: "";
+    display: inline-block;
+    margin: 0 4px 0 10px;
+}
+
+.legend_entry.highlighted, .legend_entry:hover {
+    background-color: #4b6369;
+    cursor: pointer;
+}
+
+/* .highlighted span {
+    background-color: #00000045;
+} */
+
+.highlighted {
+    background: #ffffff0f;
+    color: #e5e0ce;
+  }
+
+  .highlighted .bar_sub--value {
+    color: #e5e0ce;
+  }
+
+
+  .d-flex  {
+    display: flex;
+  }
+
+  .item-end {
+    align-items: end;
+  }
